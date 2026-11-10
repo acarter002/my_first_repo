@@ -1,5 +1,5 @@
-class_df <- ("Mary", "Anissa", "Carly", "Billy", "Johnathon")
+class_df <- c("Mary", "Anissa", "Carly", "Billy", "Johnathon")
 
-for i in range(1:length(class_df)){
-    print(i, " is having fun on the playground!")
+for (i in class_df){
+    print(paste(i, "is having fun on the playground!"))
 }
