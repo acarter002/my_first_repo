@@ -15,3 +15,10 @@ my_df = sm.datasets.fair.load_pandas()
 df = my_df.data
 
 print(df.head())
+
+# Does the number of affairs change the satisifaction rating of the marriage?
+y = df['rate_marriage']
+x = df['affairs']
+mod_lm = smf.ols('rate_marriage ~ affairs', data = df).fit()
+
+print(mod_lm.summary())
