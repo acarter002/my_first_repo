@@ -1,6 +1,6 @@
 classroom <- c("Mary", "Anissa", "Carly", "Billy", "Johnathon")
 
-for (i in class_df){
+for (i in classroom){
     print(paste(i, "is having fun on the playground!"))
 }
 
@@ -12,6 +12,9 @@ class_df <- data.frame(
 
 print(summary(class_df))
 
+# Does having a better mile time lead to good grades?
+lm_mod <- lm(gpa ~ mile_mins, data = class_df)
+print(summary(lm_mod))
 # Does having good grades lead to a better mile time?
 lm_mod <- lm(mile_mins ~ gpa, data = class_df)
 print(summary(lm_mod))
