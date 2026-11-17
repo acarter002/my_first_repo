@@ -15,3 +15,6 @@ print(summary(class_df))
 # Does having a better mile time lead to good grades?
 lm_mod <- lm(gpa ~ mile_mins, data = class_df)
 print(summary(lm_mod))
+# Does having good grades lead to a better mile time?
+lm_mod <- lm(mile_mins ~ gpa, data = class_df)
+print(summary(lm_mod))
